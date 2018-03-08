@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>My test page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form data-coffee-order="form">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by <strong>
+      <abbr title="required">*</abbr>
+    </strong>.</p>
+        <section>
+          <h2>Contact information</h2>
+          <fieldset>
+            <legend>Title</legend>
+
+            <div class="radio">
+              <label for="title_1">
+                  <input type="radio" name="prefix" value="Mr." >
+                  Mister
+                </label>
+            </div>
+            <div class="radio">
+              <label for="title_2">
+                  <input type="radio" name="prefix" value="Ms.">
+                  Miss
+                </label>
+            </div>
+          </fieldset>
+          <div class="form-group">
+            <label for="name">Username: </label>
+            <strong><abbr title="required">*</abbr></strong>
+            <input class="form-control" id="name" name="username" autofocus>
+          </div>
+
+          <div class="form-group">
+            <label for="mail">E-mail: </label>
+            <strong><abbr title="required">*</abbr></strong>
+
+            <input class="form-control" id="mail" name="usermail" autofocus>
+          </div>
+
+          <div class="form-group">
+            <label for="pwd">Password: </label>
+            <strong><abbr title="required">*</abbr></strong>
+            <input class="form-control" id="pwd" name="password">
+          </div>
+
+        </section>
+        <section>
+          <h2>Payment information</h2>
+          <p>
+            <label for="card">
+            <span>Card type:</span>
+          </label>
+            <select id="card" name="usercard">
+            <option value="visa">Visa</option>
+            <option value="mc">Mastercard</option>
+            <option value="amex">American Express</option>
+          </select>
+          </p>
+          <p>
+            <label for="number">
+            <span>Card number:</span>
+            <strong><abbr title="required">*</abbr></strong>
+          </label>
+            <input type="text" id="number" name="cardnumber">
+          </p>
+          <p>
+            <label for="date">
+            <span>Expiration date:</span>
+            <strong><abbr title="required">*</abbr></strong>
+            <em>formatted as mm/yy</em>
+          </label>
+            <input type="text" id="date" name="expiration">
+          </p>
+
+        </section>
+        <button id="mybtn" type="submit" class="btn btn-default">Submit</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+        <!--Modal code taken from https://www.w3schools.com/html/html_comments.asp -->
+
+        <div id="myModal" class="modal">
+          <div data-coffee-order="box" class="modal-content">
+            <span class="close">&times;</span>
+            <p>Thank You</p>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+  <script src="scripts/formhandler.js" charset="utf-8"></script>
+  <script src="scripts/datastore.js" charset="utf-8"></script>
+  <script src="scripts/truck.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
+</body>
+
+</html>
